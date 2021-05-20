@@ -1,0 +1,125 @@
+
+* {
+    margin: 0;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #212121;
+    color: white;
+}
+table {
+    align-items: center;
+    padding: 20px;
+}
+.button_flash_1 body {
+    
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        min-height: 800px;
+        background-color: #212121;
+        font-weight: 600;
+        
+    }
+.button_flash_1 a {
+        position: relative;
+        display: inline-block;
+        padding: 15px 30px;
+        color: #cf1b07;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        text-decoration: none;
+        font-size: 22px;
+        overflow: hidden;
+        transition: 0.2s;
+        border-radius: 5px;
+    }
+.button_flash_1 a:hover {
+        color: #a12914;
+        background: #fbd2aa;
+        box-shadow: 0 0 10px#fdbc7b,0 0 40px  #fdbc7b, 0 0 90px#fdbc7b;
+    }
+.card {
+    position: relative;
+    width: 230px;
+    height: 450px;
+    padding: 50px; 
+    transform-style: preserve-3d;
+}
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+.card .face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transition: 2s ease-in-out;
+    transform: perspective(500px) rotateY(0deg);
+}
+.card .face.front {
+    background:#111;
+    
+}
+.card:hover .face.front {
+    transform: perspective(500px) rotateY(180deg);
+}
+.card .face.back {
+    background: #212121;
+    color: #111;
+    transform: perspective(500px) rotateY(180deg);
+}
+.card:hover .face.back {
+    transform: perspective(500px) rotateY(360deg);
+}
+.card .face a {
+    font-size: 2em;
+    transform: perspective(500px) translateZ(80px);
+    color:aliceblue;
+    position:absolute;
+    text-decoration: none;
+	top:20%;
+	left:30%;
+	margin:0;
+	padding:0 20px;
+	text-shadow: 0 0 10px   #cf1b07;
+}
+.card .face a:after {
+    content:attr(data-neon);
+	position: absolute;
+	top:0;
+	left:0;
+	margin: 0;
+	padding: 0 20px;
+	color: #a12914;
+	z-index: -1;
+	filter:blur(15px);
+}
+.card .face a:before {
+    content:'';
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:#fdbc7b;
+	z-index: -2;
+	opacity: 0.3;
+	filter:blur(30px);
+}
+
